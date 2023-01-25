@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  :root {
+  
+    font-size: 62.5%;
+  
+    --bc-header: #8e9aaf;
+    --bc-headerTag: #cbc0d3;
+    --fc-header: #ffffff;
+    -fc--contact: #4a4e69;
+    --ff-title: "Staatliches", cursive;
+    --ff-pMobile-mobile: "Palanquin", sans-serif;
+    --fc-pMobile: #23053a;
+    --fc-textMobileImg: #feeafa;
+    --ff-pDesk-desk: "Roboto", sans-serif;
+    --ff-contact: "Open Sans", sans-serif;
+  }
+  
+  
+  header {
+  
+    width: 100%;
+    min-height: 27.9rem;
+    height: 100%;
+    background-color: var(--bc-header);
+  
+  }
+  
+  #logoDesk {
+    display: none;
+  }
+  
+  #logoMobile {
+    display: flex;
+    margin: auto;
+    padding-top: 3.2rem;
+    padding-bottom: 4px;
+  }
+  
+  .tagText {
+  
+    margin: auto;
+    width: 100%;
+    height: 4.9rem; 
+    padding: 1rem 0;
+    background-color: var(--bc-headerTag);
+  }
+  
+  header h1 {
+    font-family: var(--ff-title);
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+    color: var(--fc-header);
+    text-align: center;
+  }
+  
+  .pDesk {
+    display: none;
+  }
+  
+  .pMobile {
+    font-family: var(--ff-pMobile-mobile);
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1.5rem;
+    text-align: center;
+  
+    color: var(--fc-pMobile);
+    width: 30.5rem;
+    height: 7.5rem;
+    margin: 1.4rem 4rem 6.3rem;
+  }
+  
+  main {
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3.2rem;
+  }
+  
+  
+  .imgOption1 img, .imgOption2 img, .imgOption3 img, .imgOption4 img {
+  
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 3.2rem;
+    border-radius: 2rem;
+  
+  }
+  
+  
+  .imgOption1, .imgOption2, .imgOption3, .imgOption4 {
+  
+    position: relative;
+  
+  }
+  
+  .imgOption1 h2, .imgOption2 h2, .imgOption3 h2, .imgOption4 h2 {
+  
+    font-family: var(--ff-title);
+    color: var(--fc-pMobile);
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+  
+    width: 11rem;
+    height: 3.5rem;
+    background: var(--fc-textMobileImg);
+    border-radius: 2rem;
+    text-align: center;
+  }
+  
+  
+  .imgOption1 h2, .imgOption3 h2 {
+    
+    position: absolute;
+    left: 20rem;
+    bottom: 24rem;
+  }
+  
+  
+  .imgOption2 h2, .imgOption4 h2 {
+  
+    position: absolute;
+    left: 20rem;
+    bottom: 44rem;
+  
+  }
+  
+  
+  .imgOption1 h2, .imgOption2 h2, .imgOption3 h2, .imgOption4 h2 {
+  
+    animation-name: topdown;
+    animation-duration: 1800ms;
+    animation-fill-mode: forwards;
+  }
+  
+  main img {
+    animation-name: bottomdown;
+    animation-duration: 800ms;
+    animation-fill-mode: forwards;
+    object-fit: cover;
+    display: grid;
+  }
+  
+  .imgOption5, .imgOption6, .contact {
+  
+    display: none;
+  
+  }
+  
+  @keyframes topdown {
+  
+    0% {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bottomdown {
+    0% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(-15px);
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+  
+    main {
+      display: grid;
+      justify-items: center;
+      gap: 3.2rem;
+      grid-template-areas:
+        "E E"
+        "B D"
+        "A C";
+    }
+  
+    .imgOption1 {
+      grid-area: A;
+    }
+  
+    .imgOption2 {
+      grid-area: B;
+    }
+  
+    .imgOption3 {
+      grid-area: C;
+    }
+  
+    .imgOption4 {
+      grid-area: D;
+    }
+  
+    .pMobile {
+      grid-area: E;
+      width: 400px;
+    }
+  
+    .imgOption1 h2, .imgOption3 h2 {
+  
+      bottom: 24rem;
+    }
+  
+    .imgOption2 h2, .imgOption4 h2 {
+  
+      bottom: 44rem;
+  
+    }
+  }
+  
+  
+  @media screen and (min-width: 1000px) {
+    
+    .page {
+      display: flex;
+    }
+  
+    header {
+  
+      width: 37.7rem;
+      height: 100vh;
+  
+    }
+  
+    #logoMobile {
+  
+      display: none;
+    
+    }
+  
+    #logoDesk {
+      display: flex;
+      margin: auto;
+      padding: 3.2rem;
+    }
+  
+    .tagText {
+      width: 100%;
+      position: relative; 
+    }
+  
+    .pMobile {
+      display: none;
+    }
+  
+    .pDesk {
+  
+      width: 27.5rem;
+      height: 26.2rem;
+      font-family: var(--ff-pDesk-desk);
+      color: var(--fc-header);
+      font-weight: 400;
+      font-size: 2rem;
+      line-height: 2.5rem;
+  
+  
+      display: flex;
+      align-items: center;
+      text-align: center;
+      
+      margin: 10rem 4rem 12.5rem;
+    }
+  
+    main {
+  
+      width: 80rem;
+      height: 72rem;
+      
+    }
+  
+    main h2 {
+  
+      display: none;
+    }
+  
+  
+    .imgOption1 img,  .imgOption2 img, .imgOption3 img, .imgOption4 img, .imgOption5 img, .imgOption6 img {
+  
+      width: 25rem;
+      height: auto;
+      border-radius: 1.2rem;
+    
+    }
+  
+    
+  @media screen and (min-width:1200px){
+  
+    header {
+  
+      height: 100rem;
+  
+    }
+  
+    header .tagText {
+    
+      width: 37.7rem;
+      height: 8rem;
+    
+    }
+  
+    header h1 {
+  
+      font-size: 4.8rem;
+      line-height: 3.4rem;
+      margin-top: 1rem;
+    
+    }
+  
+    .imgOption5 , .imgOption6 {
+  
+      display: flex;
+    }
+
+  
+    main {
+    
+      width: 100rem;
+      height: 72rem;
+  
+      margin: 3.2rem auto;
+      padding: 3.2rem 8rem;
+      display: grid;
+      gap: 3.2rem ;
+      
+      grid-template-areas: 
+      
+      "A B E"
+      "D B F"
+      "D C F"
+      "G G G";
+  
+    }
+  
+    .imgOption5 {
+      grid-area: E;
+    }
+  
+    .imgOption6 {
+     grid-area: F;
+    }
+  
+  
+    .contact {
+      display: inline;
+      grid-area: G;
+      font-family: var(--ff-footer);
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 2.8rem;
+      color: var(--fc-footer);
+      text-align: center;
+    }
+  
+    .contact a {
+      text-decoration: none;
+      color: var(--fc-footer);
+      font-weight: 800;
+      display: inline;
+    }
+  
+  }
+  
+  }
